@@ -1,0 +1,25 @@
+<h1>Home</h1>
+
+<h2>From Rails App</h2>
+<h3>
+  Current User:
+  <%= current_user.inspect %>
+</h3>
+<h3>
+  Query:
+  <%= @query %>
+</h3>
+
+<hr />
+
+<h2>From Goliath App</h2>
+
+<h3>
+  <%= @data.html_safe if defined? @data %>
+</h3>
+
+<hr />
+
+<h1>
+  <%= link_to "Logout", destroy_user_session_path, :method => :delete %>
+</h1>
